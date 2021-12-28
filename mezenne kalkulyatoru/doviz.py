@@ -63,7 +63,8 @@ class Pencere(QtWidgets.QWidget):
         self.yazi.setText(answer)
 
     def icerik(self):
-        url = "http://data.fixer.io/api/latest?access_key=88e53423e91194f8428de2874ccb628a"
+        access_key = "-----KEY-----"
+        url = "http://data.fixer.io/api/latest?access_key=" + access_key
         response = requests.get(url)
         json_iceriyi = response.json()
         return json_iceriyi
